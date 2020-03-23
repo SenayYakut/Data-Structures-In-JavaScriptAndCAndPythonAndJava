@@ -1,3 +1,5 @@
+//this is the O(N) runtime which is BCR(Best Conceivable Runtime)
+//Best conceivable runtime is different than best case runtime
 function twoSum(numArray, sum){
     var pairs=[];
     var hashTable=[];
