@@ -16,4 +16,5 @@
         //Improved Algorith O(N Log N);
         //Optimal Algorithm ?
         //BCR O(N)
-  //ok we have reached to best run time but how about space complexity. think even if we had unsorted arry still we could have the best runtime with our solution but why the interviewer gave us sorted array than.       
+  //ok we have reached to best run time but how about space complexity. think even if we had unsorted arry still we could have the best runtime with our solution but why the interviewer gave us sorted array than.
+  //So our choice should be binary search in order to get BCR and O(1) Space       
