@@ -1,3 +1,4 @@
+//Linear time complexity O(n)+O(m)If we assume our first arr has a length of n and second arr has a length of m. We use hashMap to get best running time result. which is O(N) 
 function harmlessRansomNote(noteText, magazineText) {
     var noteArr = noteText.split(' ');
     var magazineArr = magazineText.split(' ');
