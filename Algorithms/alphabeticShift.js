@@ -5,7 +5,7 @@ split()
 indexOf()
 join()
 
-
+*/
 function alphabeticShift(str){
     const alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
     var shiftedStr=str.split("");
@@ -19,7 +19,7 @@ function alphabeticShift(str){
     return shiftedStr.join("");
 }
 console.log(alphabeticShift("crazy"));//dsb
-*/
+
 // Another way creating an object, dictionary and this is much faster
 function alphabeticShift(str){
     const alphabet={"a":"b","b":"c","c":"d","d":"e","e":"f","f":"g","g":"h","h":"i","i":"j","j":"k","k":"l","l":"m","m":"n",
@@ -33,3 +33,5 @@ function alphabeticShift(str){
 }
 console.log(alphabeticShift("crazy"));//dsbaz
 console.log(alphabeticShift("senay"));//tfobz
+
+//There is 3rd solution which is ASCII, it is even better solution Think about an ASCII solution 
