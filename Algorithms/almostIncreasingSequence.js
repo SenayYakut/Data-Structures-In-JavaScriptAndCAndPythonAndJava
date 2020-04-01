@@ -6,15 +6,15 @@ function almostIncreasingSequence(sequence){
     var nonOrderNum=[];
 
     for(let i=0; i<sequence.length-1; i++){
-        if(sequence[i]>sequence[i+1]){
+        if(sequence[i]>=sequence[i+1]){
         nonOrderNum.push(sequence[i+1]);
         }
     }
-    if(nonOrderNum.length===1) return true;
+    if(nonOrderNum.length<=1) return true;
     else return false;
 }
 console.log(almostIncreasingSequence([1,3,2]));//true
 console.log(almostIncreasingSequence([1,3,0,4,5,2,]));//false
-console.log(almostIncreasingSequence([1,2,3,4,5]));//false
+console.log(almostIncreasingSequence([1,2,3,4,5]));//true
 
 
