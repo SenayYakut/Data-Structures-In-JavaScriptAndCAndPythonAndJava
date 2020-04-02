@@ -13,7 +13,7 @@ function alphabetSubsequence(s){
   });
   if(new Set(asciiVal).size!==asciiVal.length) return false;
 
-  for(let i=0; i<asciiVal.length; i++){
+  for(let i=0; i<asciiVal.length-1; i++){
       if(asciiVal[i]>asciiVal[i+1]) return false;
   }
     return true;
