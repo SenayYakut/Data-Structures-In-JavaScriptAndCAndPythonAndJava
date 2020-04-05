@@ -1,6 +1,6 @@
 /*
 Given an array of integers, replace all the occurances of elemToReplace with substitutionElem.
-*/
+
 //Solution 1
 function arrayReplace(inputArray, elemToReplace, substitutionElem){
     for(let i=0; i<inputArray.length; i++){
@@ -12,3 +12,18 @@ function arrayReplace(inputArray, elemToReplace, substitutionElem){
 }
 console.log(arrayReplace([1,2,1],1,3));//[3,2,3]
 console.log(arrayReplace([0,2,1],1,3))//[0,2,3]
+*/
+//Solution 2
+
+function arrayReplace(inputArray, elemToReplace, substitutionElem){
+    inputArray.forEach((element, index)=>{
+        if(element===elemToReplace){
+            inputArray[index]=substitutionElem;
+        }
+    });
+    return inputArray;
+}
+console.log(arrayReplace([1,2,1],1,3));//[3,2,3]
+console.log(arrayReplace([0,2,1],1,3))//[0,2,3]
+
+
