@@ -7,7 +7,7 @@ The knight continues moving until it has made exactly K moves or has moved off t
 */
 
 //Creating and initializing the array to 0
-//Create 2 matrices
+//Create a 2D Array
 let getTwoDArray = function(N) {
     let arr = new Array(N);
     
