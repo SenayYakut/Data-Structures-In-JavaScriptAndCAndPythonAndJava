@@ -13,9 +13,11 @@ function chessBoardCellColor(cell1, cell2){
         "g":7,
         "h":8
     };
-    let total1=board[cell1[0]]+parseInt(cell1[1]);
-    let total2=board[cell2[0]]+parseInt(cell2[1]);
+    let total1=(board[cell1[0]]+parseInt(cell1[1]))%2;
+    let total2=(board[cell2[0]]+parseInt(cell2[1]))%2;
 
-    return total1%2===total2%2;
+    return total1===total2;
 }
-console.log(chessBoardCellColor("a1","c3"));
+console.log(chessBoardCellColor("a1","c3"));//true
+console.log(chessBoardCellColor("a1","h3"));//false
+
