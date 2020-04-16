@@ -6,21 +6,23 @@ For each trainer we collect two pieces of informationper task[answerTime, correc
 In this case, Bot's correct answer time for a given task would be the average of the answer times from the trainers who answered correctly.Given all of the training information of a specific task, calculate the bot's answer time. 
 */
 
-
+//Solution 1
 function companyBotStrategy(dataArr){
     var trainingStr=0;  
-    var divede=0;
+    var counter=0;
     var total=0;
-    for(let i=0; i<dataArr.length; i++){
+    for(let i=0; i<4; i++){
+        if(dataArr[i][1]!==0 && dataArr[i][1]!==-1){
         total+=dataArr[i][0];
-        while(dataArr[i][1]===1){
-            divede++;
+        counter++;
         }
-        if(divede<=0){
-            trainingStr=0;
-        }      
+        if(total===0){
+        return trainingStr;
+        }
+        }
+        trainingStr=total/counter;
+        return trainingStr;   
     }
-    trainingStr=total/divede; 
-    return total;
-}
-console.log(companyBotStrategy([[4,1],[4,-1],[0,0],[6,1]]));
+console.log(companyBotStrategy([[3,1],[6,1],[4,1],[5,1]]));//4.5
+console.log(companyBotStrategy([[4,-1],[4,-1],[0,0],[6,-1]]));//0
+console.log(companyBotStrategy([[4,1],[4,-1],[0,0],[6,1]]));//5
