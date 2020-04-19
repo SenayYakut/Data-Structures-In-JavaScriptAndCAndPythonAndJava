@@ -3,11 +3,11 @@ Given a sorted integer array does not contain any duplicates, return a summary o
 */
 
 function composeRanges(nums){
-    if(nums.length<1){
+if(nums.length<1){
         return [];
-    }
+}
 const ranges=[{start:nums[0], end:nums[0]}];
-for(let i=0; i<nums.length; i++){
+for(let i=1; i<nums.length; i++){
     if(ranges[ranges.length-1].end+1===nums[i]){
        ranges[ranges.length-1].end=nums[i];
     }else{
@@ -23,4 +23,4 @@ for(let i=0; i<nums.length; i++){
    }
    return ranges;
 }
-console.log(composeRanges([-1,0,1,2,6,7,9]));//
+console.log(composeRanges([-1,0,1,2,6,7,9]));//["-1 -> 2","6 -> 7","9"]
