@@ -7,11 +7,16 @@ Math.max()
 */
 
 function electionWinners(votes, k){
-    votes=votes.sort();
-    let len=votes.length;
-    const winnerSoFar=votes[len-1];
+    votes=votes.sort((a,b)=>{
+        a-b;
+    });
+    let len=votes.length-1;
+    const winnerSoFar=Math.max(...votes);
     let possibleWinners=[];
-    for(let i=len-1; i>=0; i--){
+    if(k===0 && winnerSoFar!==votes[len-1]){
+        return 1;
+    }
+    for(let i=len; i>=0; i--){
         if(votes[i]+k>winnerSoFar){
             possibleWinners.push(votes[i]);   
         }
