@@ -5,15 +5,15 @@ You know the length I of your ride in miles and how much one mile costs for each
 */
 //Solution1
 const options=["UberX","UberXL","UberPlus","UberBlack","UberSUV"];
-const fares=[0.3,0.5,0.7,1,1.3];
 
 function fancyRide(I,fares){
     for(let i=0; i<fares.length; i++){
-        if(fares[i] * I<=20)
+        if(fares[i] * I <= 20)
         bestOption=options[i];
     }
     return bestOption;
 }
-console.log(fancyRide(30,fares));//UberXL
-console.log(fancyRide(20,fares));//UberBlack
+console.log(fancyRide(30,[0.3,0.5,0.7,1,1.3]));//UberXL
+console.log(fancyRide(20,[0.3,0.5,0.7,1,1.3]));//UberBlack
+
 
