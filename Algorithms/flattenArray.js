@@ -5,11 +5,11 @@ isArray()
 push()
 */
 //i will use recursion to solve this problem
+
 function flattenArray(arr){
     const oneArray=[];
 
     flatten(arr);
-
     function flatten(arr){
     arr.forEach(element=>{
         if(Array.isArray(element)){
@@ -17,10 +17,10 @@ function flattenArray(arr){
         }else{
             oneArray.push(element);
         }
-        });
+    });
     }
     return oneArray;
-}
+
+}               
 console.log(flattenArray([1,2,3,[4,5],[[[6]]]]));//[1,2,3,4,5,6]
-console.log(flattenArray([1,2,3,[4,5],[[[6]]],[[[7,8,10]]]]));//[1,2,3,4,5,6,7,8,10]
-                
+console.log(flattenArray([1,2,3,[4,5],[[[6]]],[[[[7,8,9,10]]]],11]));//[1,2,3,4,5,6,7,8,9,10,11]
