@@ -5,7 +5,7 @@ If you arent familiar with HTML, consult with this note.
 HINTS:
 split()
 toString()
-
+*/
 //Solution 1 this works but not the perfect solution
 function htmlEndTagByStartTag(tag){
     let endTag=tag.split(" ");
@@ -18,10 +18,11 @@ function htmlEndTagByStartTag(tag){
     return endTag.join("");
 
 }
+console.log(htmlEndTagByStartTag("<link rel='stylesheet' type='text/css' href='/style.css'>"));//</link
 console.log(htmlEndTagByStartTag("<i>"));//</i>
 console.log(htmlEndTagByStartTag("<button type='button' disabled>"));//</button>
 console.log(htmlEndTagByStartTag("<html>"));//</html>
-*/
+
 //Solution 2
 function htmlEndTagByStartTag(openingTag){
     let openingTagArr=openingTag.split(" ");
@@ -34,6 +35,7 @@ function htmlEndTagByStartTag(openingTag){
     endingTag = endingTag[endingTag.length-1]===">"? endingTag:endingTag+=">";
     return endingTag;  
 }
+console.log(htmlEndTagByStartTag("<link rel='stylesheet' type='text/css' href='/style.css'>"));//</link
 console.log(htmlEndTagByStartTag("<i>"));//</i>
 console.log(htmlEndTagByStartTag("<button type='button' disabled>"));//</button>
 console.log(htmlEndTagByStartTag("<html>"));//</html>
