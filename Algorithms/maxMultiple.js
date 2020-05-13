@@ -5,7 +5,7 @@ N is less than or equal to bound
 N is greater than 0.
 It is guaranteed that such a number exists.
 */
-
+//Solution 1
 function maxMultiple(divisor, bound){
     let number=1;
     for(let i=1; i<=bound; i++){
@@ -18,5 +18,13 @@ function maxMultiple(divisor, bound){
 console.log(maxMultiple(3,10));//9
 console.log(maxMultiple(4,10));//8
 console.log(maxMultiple(5,10));//10
-//8
 
+//Solution 2
+function maxMultiple(divisor, bound){
+    const remainder=bound%divisor;
+    const number=bound-remainder;
+    return number;
+}
+console.log(maxMultiple(3,10));//9
+console.log(maxMultiple(4,10));//8
+console.log(maxMultiple(5,10));//10
