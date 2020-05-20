@@ -7,9 +7,10 @@ String.fromCharCode()
 */
 function newNumeralSystem(number){
     const numerals=[];
-    let startCharCount=65;
-    let endCharCount= number.charCodeAt(0);
-    while(startCharCount<=endCharCount){
+    let startCharCount=65;//ASCII value of first character in alphabet
+    let endCharCount=number.charCodeAt(0);
+
+    while(startCharCount <= endCharCount){
         const numeral= `${String.fromCharCode(startCharCount)} + ${String.fromCharCode(endCharCount)}`;
         numerals.push(numeral);
         startCharCount++;
@@ -17,4 +18,5 @@ function newNumeralSystem(number){
     }
     return numerals;
 }
-console.log(newNumeralSystem("G"));
+console.log(newNumeralSystem("G"));//[ 'A + G', 'B + F', 'C + E', 'D + D' ] 
+console.log(newNumeralSystem("A"));//[ 'A + A' ]
