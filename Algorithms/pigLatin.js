@@ -8,7 +8,7 @@ split()
 test()
 join()
 push()
-*/
+
 
 function pigLatin(str){
 const letters = str.split("");
@@ -28,8 +28,28 @@ while(true){
     
     return str;
 }
-console.log(pigLatin("glove"));
-console.log(pigLatin("eight"));
+*/
+
+function pigLatin(str){
+const letters=str.split("");
+const regexVowels=/[aeuio]/;
+
+if(regexVowels.test(letters[0])){
+    return `${str}way`;
+}
+while(true){
+    if(!regexVowels.test(letters[0])){
+        letters.push(letters.splice(0,1));
+    }else{
+        break;
+    }
+}
+str = letters.join("")+ "ay";
+return str;
+
+}
+console.log(pigLatin("glove"));//oveglay 
+console.log(pigLatin("eight"));//eightway
 
 
 
