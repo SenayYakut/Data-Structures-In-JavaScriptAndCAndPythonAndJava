@@ -23,4 +23,16 @@ console.log(shapeArea(3));//13
 console.log(shapeArea(4));//25
 console.log(shapeArea(1));//1
 
+//Solution 3
+function shapeArea(n){
+if(n===1){return 1;};
+
+return (n * 4) - 4 + shapeArea(n-1);
+}
+
+console.log(shapeArea(2));//5
+console.log(shapeArea(3));//13
+console.log(shapeArea(4));//25
+console.log(shapeArea(1));//1
+
 
