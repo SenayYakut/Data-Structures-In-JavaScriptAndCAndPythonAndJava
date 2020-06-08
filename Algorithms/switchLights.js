@@ -3,7 +3,7 @@
 */
 //Solution 1
 function switchLights(a){
-    for(let i =0; i<a.length; i++){
+    for(let i = 0; i < a.length; i++){
             if(a[i]===1){
                 for( let j=0; j<=i; j++){
                     a[j]=1-a[j];
