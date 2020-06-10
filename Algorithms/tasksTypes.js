@@ -7,7 +7,7 @@ All other tasks are labeled as Later
 
 Given an array of deadlines and todays date day, your goal is to find the number of tasks with each label type and return it as an array with the format [Today, Upcoming, Later], where Today, Upcoming, and Later are the number of tasks that correspond to that label.
 */
-
+//Solution 1
 function tasksTypes(deadlines, day){
     const tasks1=[];
     const tasks2=[];
@@ -17,10 +17,11 @@ function tasksTypes(deadlines, day){
         if(deadline<=day){
             tasks1.push(deadline);
         }
-        else if(deadline > day && deadline<=7){
+        else if(deadline > day && deadline<=day+7){
             tasks2.push(deadline);
         }
-        else{
+        else 
+        {
             tasks3.push(deadline);
         }
     });
@@ -30,3 +31,25 @@ function tasksTypes(deadlines, day){
     return tasks;
 }
 console.log(tasksTypes([1,2,3,4,5],2));//[2,3,0]
+console.log(tasksTypes([1,2,4,2,10,3,1,4,5,4,9,8],1));//[2,8,2]
+
+//Solution 2
+
+function tasksTypes(deadlines, day){
+    let [today, upcoming, later]=[0,0,0];
+    deadlines.forEach(deadline=>{
+        if(deadline<=day){
+            today++;
+        }
+        else if(deadline > day && deadline<=day+7){
+            upcoming++;
+        }
+        else{
+            later++;
+        }
+    });
+    return [today, upcoming, later];
+
+}
+console.log(tasksTypes([1,2,3,4,5],2));//[2,3,0]
+console.log(tasksTypes([1,2,4,2,10,3,1,4,5,4,9,8],1));//[2,8,2]
