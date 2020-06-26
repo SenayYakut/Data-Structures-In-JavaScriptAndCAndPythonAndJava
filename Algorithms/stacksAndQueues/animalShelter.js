@@ -1,0 +1,3 @@
+/*
+An animal shelter, which holds only dogs or cats, operates strickly first in first out(FIFO). people mush adopt either the oldest(based on the arrival time) of all animals at the shelter, or they can select whether they would prefer a dog or a cat (and will receive the oldest animal of that type). they cant select which spesific animal they would like. Create the data structures to maintain this system and implement operations such as enqueue dequeue any, dequeue dog and dequeuCat you may use the built in linkedlist data structure
+*/
